@@ -1,15 +1,23 @@
 import 'package:chart_app/screens/home_screen/home.dart';
-import 'package:chart_app/screens/splash_screen.dart';
+
 import 'package:chart_app/styles/colors.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SignUp extends StatelessWidget {
+class SignUp extends StatefulWidget {
   SignUp({Key? key}) : super(key: key);
 
   static const routeName = '/signup_screen';
+
+  @override
+  State<SignUp> createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
   TextEditingController _fullName = TextEditingController();
 
   TextEditingController _emailController = TextEditingController();
+
   TextEditingController _pwdController = TextEditingController();
 
   GlobalKey<FormState> _formKey = GlobalKey();
@@ -53,7 +61,7 @@ class SignUp extends StatelessWidget {
                           fontSize: 33,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 8,
                       ),
                       Text(
@@ -67,7 +75,7 @@ class SignUp extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
 
@@ -75,14 +83,15 @@ class SignUp extends StatelessWidget {
                 Form(
                   key: _formKey,
                   child: Container(
-                    padding:
-                        EdgeInsets.only(top: 25.0, left: 20.0, right: 20.0),
+                    padding: const EdgeInsets.only(
+                        top: 25.0, left: 20.0, right: 20.0),
                     child: Column(
                       children: [
                         Column(
                           children: [
                             Container(
-                              padding: EdgeInsets.symmetric(horizontal: 10),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 10),
                               decoration: BoxDecoration(
                                 color: black12,
                                 borderRadius: BorderRadius.circular(10),
@@ -91,18 +100,19 @@ class SignUp extends StatelessWidget {
                                 height: 60,
                                 child: TextFormField(
                                   controller: _fullName,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     border: InputBorder.none,
                                     hintText: 'Full Name',
                                   ),
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 18,
                             ),
                             Container(
-                              padding: EdgeInsets.symmetric(horizontal: 10),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 10),
                               decoration: BoxDecoration(
                                 color: black12,
                                 borderRadius: BorderRadius.circular(10),
@@ -111,20 +121,21 @@ class SignUp extends StatelessWidget {
                                 height: 60,
                                 child: TextFormField(
                                   controller: _emailController,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     border: InputBorder.none,
-                                    hintText: 'emal ',
+                                    hintText: 'email ',
                                   ),
                                 ),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 18.0,
                             ),
                             Column(
                               children: [
                                 Container(
-                                  padding: EdgeInsets.symmetric(horizontal: 10),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10),
                                   decoration: BoxDecoration(
                                     color: black12,
                                     borderRadius: BorderRadius.circular(10),
@@ -135,12 +146,31 @@ class SignUp extends StatelessWidget {
                                         height: 60,
                                         child: TextFormField(
                                           controller: _pwdController,
-                                          decoration: InputDecoration(
-                                            border: InputBorder.none,
-                                            hintText: 'Passward',
-                                          ),
                                           obscureText: true,
                                           obscuringCharacter: '.',
+                                          validator: (value) {
+                                            if (value!.isEmpty) {
+                                              return 'pasward  is emty';
+                                            }
+                                          },
+                                          decoration: InputDecoration(
+                                            border: InputBorder.none,
+                                            suffixIcon: IconButton(
+                                              onPressed: () {
+                                                setState(() {
+                                                  obscure == !obscure;
+                                                });
+                                              },
+                                              icon: Icon(
+                                                obscure == false
+                                                    ? CupertinoIcons
+                                                        .eye_slash_fill
+                                                    : CupertinoIcons.eye_solid,
+                                                color: black,
+                                              ),
+                                            ),
+                                            hintText: 'Passward',
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -150,13 +180,13 @@ class SignUp extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 18.0,
                         ),
                         Container(
                           height: 60,
                           width: MediaQuery.of(context).size.width,
-                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
                           decoration: BoxDecoration(
                             color: deepOrange,
                             borderRadius: BorderRadius.circular(15),

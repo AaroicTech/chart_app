@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         Home.routeName: (context) => Home(),
         ChartScreen.routeName: (context) => ChartScreen(),
         ChartingScreen.routnamed: (context) => ChartingScreen(),
-        ProfilePage.routnamed: (context) => ProfilePage()
+        DetailPage.routnamed: (context) => DetailPage()
       },
     );
   }

@@ -2,15 +2,15 @@ import 'package:chart_app/styles/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ProfilePage extends StatefulWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+class DetailPage extends StatefulWidget {
+  const DetailPage({Key? key}) : super(key: key);
   static const routnamed = 'Profile';
 
   @override
-  _ProfilePage createState() => _ProfilePage();
+  _DetailPage createState() => _DetailPage();
 }
 
-class _ProfilePage extends State<ProfilePage> {
+class _DetailPage extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

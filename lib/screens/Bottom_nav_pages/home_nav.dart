@@ -3,9 +3,6 @@ import 'package:chart_app/styles/colors.dart';
 import 'package:chart_app/styles/font.dart';
 import 'package:flutter/material.dart';
 
-import 'moment.dart';
-import 'profile_nav.dart';
-
 class HomeNavPage extends StatefulWidget {
   const HomeNavPage({Key? key}) : super(key: key);
 
@@ -45,7 +42,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                             IconButton(
                               onPressed: () {
                                 Navigator.pushNamed(
-                                    context, ProfilePage.routnamed);
+                                    context, DetailPage.routnamed);
                               },
                               icon: Icon(
                                 Icons.add,
@@ -136,50 +133,93 @@ class _HomeNavPageState extends State<HomeNavPage> {
                 Column(
                   children: [
                     Card(
-                      elevation: 10,
+                      elevation: 3,
                       child: Column(
                         children: [
                           Container(
                             padding: const EdgeInsets.all(10),
-                            height: 200,
+                            height: 220,
                             child: ListView(
                               scrollDirection: Axis.horizontal,
                               children: List.generate(
                                 10,
                                 (index) {
-                                  return Container(
-                                    margin: const EdgeInsets.only(right: 20),
-                                    child: const Image(
-                                      image: AssetImage(
-                                        'assets/IMAGE.png',
+                                  return GestureDetector(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, DetailPage.routnamed);
+                                    },
+                                    child: Container(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          Container(
+                                            height: 120,
+                                            width: 170,
+                                            margin: const EdgeInsets.only(
+                                                right: 20),
+                                            decoration: BoxDecoration(
+                                              image: const DecorationImage(
+                                                image: AssetImage(
+                                                  'assets/Frame 33553.png',
+                                                ),
+                                                fit: BoxFit.cover,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 15,
+                                          ),
+                                          Container(
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  "Mason York",
+                                                  style: textStyle5,
+                                                ),
+                                                SizedBox(
+                                                  width: 20,
+                                                ),
+                                                Container(
+                                                  height: 30,
+                                                  width: 50,
+                                                  decoration: BoxDecoration(
+                                                    color: black,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                      10,
+                                                    ),
+                                                  ),
+                                                  child: Center(
+                                                    child: Text(
+                                                      'S3/h',
+                                                      style: textStyle6,
+                                                    ),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          ),
+                                          Text(
+                                            "7 km from you",
+                                            style: textStyle2,
+                                          ),
+                                        ],
                                       ),
-                                      fit: BoxFit.cover,
-                                    ),
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(40),
                                     ),
                                   );
                                 },
                               ),
                             ),
-                          ),
-                          Row(
-                            children: [
-                              Text(
-                                'Near you',
-                                style: textStyle3,
-                              ),
-                              const SizedBox(
-                                width: 20,
-                              ),
-                              Container(
-                                height: 40,
-                                decoration: BoxDecoration(
-                                  color: black,
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                              )
-                            ],
                           ),
                         ],
                       ),
@@ -187,29 +227,112 @@ class _HomeNavPageState extends State<HomeNavPage> {
                     const SizedBox(
                       height: 20,
                     ),
-                    Container(
-                      foregroundDecoration: BoxDecoration(),
-                      padding: const EdgeInsets.all(10),
-                      height: 200,
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: List.generate(
-                          10,
-                          (index) {
-                            return Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              child: const Image(
-                                image: AssetImage(
-                                  'assets/IMAGE.png',
-                                ),
-                                fit: BoxFit.cover,
-                              ),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(40),
-                              ),
-                            );
-                          },
+                    Row(
+                      children: [
+                        const Padding(padding: EdgeInsets.all(10)),
+                        Text(
+                          'Suggested',
+                          style: textStyle3,
                         ),
+                        const SizedBox(
+                          width: 155,
+                        ),
+                        Text(
+                          'View off',
+                          style: textStyle4,
+                        ),
+                      ],
+                    ),
+                    Card(
+                      elevation: 3,
+                      child: Column(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(10),
+                            height: 220,
+                            child: ListView(
+                              scrollDirection: Axis.horizontal,
+                              children: List.generate(
+                                10,
+                                (index) {
+                                  return GestureDetector(
+                                    onTap: () {
+                                      Navigator.pushNamed(
+                                          context, DetailPage.routnamed);
+                                    },
+                                    child: Container(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        children: [
+                                          Container(
+                                            height: 120,
+                                            width: 170,
+                                            margin: const EdgeInsets.only(
+                                                right: 20),
+                                            decoration: BoxDecoration(
+                                              image: const DecorationImage(
+                                                image: AssetImage(
+                                                  'assets/Frame 33546.png',
+                                                ),
+                                                fit: BoxFit.cover,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 15,
+                                          ),
+                                          Container(
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  "Mason York",
+                                                  style: textStyle5,
+                                                ),
+                                                SizedBox(
+                                                  width: 20,
+                                                ),
+                                                Container(
+                                                  height: 30,
+                                                  width: 50,
+                                                  decoration: BoxDecoration(
+                                                    color: black,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                      10,
+                                                    ),
+                                                  ),
+                                                  child: Center(
+                                                    child: Text(
+                                                      'S3/h',
+                                                      style: textStyle6,
+                                                    ),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          ),
+                                          Text(
+                                            "2 km from you",
+                                            style: textStyle2,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],

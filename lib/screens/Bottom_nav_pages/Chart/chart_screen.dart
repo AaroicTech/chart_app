@@ -1,5 +1,6 @@
 import 'package:chart_app/screens/Bottom_nav_pages/Chart/charting_screen.dart';
 import 'package:chart_app/styles/colors.dart';
+import 'package:chart_app/styles/font.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -23,11 +24,11 @@ class _HomeState extends State<ChartScreen> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
         ),
-        margin: EdgeInsets.only(top: 40),
+        margin: const EdgeInsets.only(top: 40),
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.only(right: 310),
+              padding: const EdgeInsets.only(right: 310),
               child: Text(
                 'Chat',
                 style: TextStyle(
@@ -70,14 +71,20 @@ class _HomeState extends State<ChartScreen> {
                       onTap: () {
                         Navigator.pushNamed(context, ChartingScreen.routnamed);
                       },
-                      child: const Card(
+                      child: Card(
                         child: ListTile(
-                          leading: CircleAvatar(
+                          leading: const CircleAvatar(
                             radius: 40,
                             backgroundImage: AssetImage('assets/IMAGE.png'),
                           ),
-                          title: Text('Will Knowles '),
-                          subtitle: Text('Hi! how\s your dog - 1min'),
+                          title: Text(
+                            'Will Knowles ',
+                            style: textStyle3,
+                          ),
+                          subtitle: Text(
+                            'Hi! how\s your dog - 1min',
+                            style: textStyle2,
+                          ),
                         ),
                       ),
                     );
@@ -88,8 +95,6 @@ class _HomeState extends State<ChartScreen> {
           ],
         ),
       ),
-
-      
     );
   }
 }

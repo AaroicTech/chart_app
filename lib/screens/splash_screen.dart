@@ -82,7 +82,7 @@ class OnboardingScreen extends StatelessWidget {
                           ),
                           const CircleAvatar(
                             radius: 20,
-                            backgroundColor: Colors.black54,
+                            backgroundColor: Colors.white24,
                             child: Text(
                               '2',
                               style: TextStyle(
@@ -98,13 +98,14 @@ class OnboardingScreen extends StatelessWidget {
                           ),
                           const CircleAvatar(
                             radius: 20,
-                            backgroundColor: Colors.black54,
+                            backgroundColor: Colors.white24,
                             child: Text(
                               '3',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20,
-                                  color: Colors.white),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ],
@@ -114,7 +115,10 @@ class OnboardingScreen extends StatelessWidget {
                       margin: const EdgeInsets.only(top: 20),
                       child: const Text(
                         "Too tired to walk your dog?",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -122,7 +126,10 @@ class OnboardingScreen extends StatelessWidget {
                     ),
                     const Text(
                       "Let's help you!",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
                     ),
                   ],
                 ),

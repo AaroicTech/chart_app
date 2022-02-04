@@ -25,4 +25,18 @@ final textStyle4 = TextStyle(
   color: black26,
   fontSize: 18,
 );
-
+final textStyle5 = TextStyle(
+  fontWeight: FontWeight.bold,
+  color: black,
+  fontSize: 20,
+);
+final textStyle6 = TextStyle(
+  fontWeight: FontWeight.bold,
+  color: white,
+  fontSize: 15,
+);
+//  final textStyle7 = TextStyle(
+//   fontWeight: FontWeight.bold,
+//   color: black,
+//   fontSize: 20,
+// );
