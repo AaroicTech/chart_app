@@ -76,24 +76,24 @@ flutter:
   fonts:
     - family: Poppins
       fonts:
-        - asset: fonts/Poppins-Black.ttf
-        - asset: fonts/Poppins-BlackItalic.ttf
-        - asset: fonts/Poppins-Bold.ttf
-        - asset: fonts/Poppins-BoldItalic.ttf
-        - asset: fonts/Poppins-ExtraBold.ttf
-        - asset: fonts/Poppins-ExtraBoldItalic
-        - asset: fonts/Poppins-ExtraLight.ttf
-        - asset: fonts/Poppins-ExtraLightItalic.ttf
-        - asset: fonts/Poppins-Italic.ttf
-        - asset: fonts/Poppins-Light.ttf
-        - asset: fonts/Poppins-LightItalic.ttf
-        - asset: fonts/Poppins-Medium.ttf
-        - asset: fonts/Poppins-MediumItalic.ttf
-        - asset: fonts/Poppins-Regular.ttf
-        - asset: fonts/Poppins-SemiBold.ttf
-        - asset: fonts/Poppins-SemiBoldItalic.ttf
-        - asset: fonts/Poppins-Thin.ttf
-        - asset: fonts/Poppins-ThinItalic.ttf
+        - asset: fonts/poppins_black.ttf
+        - asset: fonts/poppins_black_italic.ttf
+        - asset: fonts/poppins_bold.ttf
+        - asset: fonts/poppins_bold_italic.ttf
+        - asset: fonts/poppins_extra_bold.ttf
+        - asset: fonts/poppins_extra_bold_italic
+        - asset: fonts/poppins_extra_light.ttf
+        - asset: fonts/poppins_extra_light_italic.ttf
+        - asset: fonts/poppins_italic.ttf
+        - asset: fonts/poppins_light.ttf
+        - asset: fonts/poppins_light_italic.ttf
+        - asset: fonts/poppins_medium.ttf
+        - asset: fonts/poppins_medium_italic.ttf
+        - asset: fonts/poppins_regular.ttf
+        - asset: fonts/poppins_semi_bold.ttf
+        - asset: fonts/poppins_semi_bold_italic.ttf
+        - asset: fonts/poppins_thin.ttf
+        - asset: fonts/poppins_thin_italic.ttf
           style: italic
   # - family: Trajan Pro
   #     fonts:
