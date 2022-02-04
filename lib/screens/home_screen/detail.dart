@@ -77,15 +77,16 @@ class _DetailPage extends State<DetailPage> {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Container(
-                  padding: const EdgeInsets.only(top: 20),
+                  padding: const EdgeInsets.only(top: 10),
                   child: Column(
                     children: [
                       Text(
                         'Alex Murray',
                         style: TextStyle(
-                            color: black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 24),
+                          color: black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 24,
+                        ),
                       ),
                       Column(
                         children: [
@@ -151,7 +152,7 @@ class _DetailPage extends State<DetailPage> {
                             ),
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Row(
                             children: [
@@ -209,7 +210,7 @@ class _DetailPage extends State<DetailPage> {
                             ],
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Container(
                             padding: const EdgeInsets.all(15),
@@ -217,15 +218,33 @@ class _DetailPage extends State<DetailPage> {
                               children: [
                                 Container(
                                   alignment: Alignment.topLeft,
-                                  height: 20,
+                                  height: 45,
                                   color: white,
-                                  child: Text(
-                                    '30 years',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
-                                      color: black,
-                                    ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Age',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 15,
+                                          color: black,
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text(
+                                        '30 years',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20,
+                                          color: black,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                                 const SizedBox(
@@ -233,15 +252,32 @@ class _DetailPage extends State<DetailPage> {
                                 ),
                                 Container(
                                   alignment: Alignment.topRight,
-                                  height: 20,
+                                  height: 45,
                                   color: white,
-                                  child: Text(
-                                    '11 months',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
-                                      color: black,
-                                    ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Expirence',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 15,
+                                          color: black,
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text(
+                                        '11 months',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20,
+                                          color: black,
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ],
@@ -291,14 +327,14 @@ class _DetailPage extends State<DetailPage> {
                             ),
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           GestureDetector(
                             onTap: () {
                               // Navigator.pushNamed(context, ChartScreen.routeName);
                             },
                             child: Container(
-                              height: 50,
+                              height: 45,
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
                                 color: deepOrange,

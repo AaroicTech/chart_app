@@ -22,7 +22,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
             child: Column(
               children: [
                 Container(
-                  padding: const EdgeInsets.only(left: 12),
+                  padding: const EdgeInsets.only(left: 8),
                   child: Row(
                     children: [
                       Text(
@@ -34,20 +34,21 @@ class _HomeNavPageState extends State<HomeNavPage> {
                         ),
                       ),
                       const SizedBox(
-                        width: 130,
+                        width: 150,
                       ),
                       Container(
+                        height: 45,
+                        // width: 40,
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            IconButton(
-                              onPressed: () {
-                                Navigator.pushNamed(
-                                    context, DetailPage.routnamed);
-                              },
-                              icon: Icon(
-                                Icons.add,
-                                color: white,
-                              ),
+                            const Icon(
+                              Icons.add,
+                              color: Colors.white,
+                            ),
+                            const SizedBox(
+                              width: 10,
                             ),
                             Text(
                               'Burk a walk',
@@ -116,7 +117,9 @@ class _HomeNavPageState extends State<HomeNavPage> {
                 ),
                 Row(
                   children: [
-                    const Padding(padding: EdgeInsets.all(10)),
+                    const Padding(
+                      padding: EdgeInsets.all(10),
+                    ),
                     Text(
                       'Near you',
                       style: textStyle3,

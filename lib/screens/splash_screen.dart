@@ -140,6 +140,8 @@ class OnboardingScreen extends StatelessWidget {
             ),
             Expanded(
               child: Container(
+                height: 60,
+                //  width: 400,
                 // padding: EdgeInsets.all(10),
                 margin: const EdgeInsets.all(8),
                 child: Center(
