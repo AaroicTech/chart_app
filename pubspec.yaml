@@ -79,22 +79,6 @@ flutter:
         - asset: fonts/poppins_black.ttf
         - asset: fonts/poppins_black_italic.ttf
         - asset: fonts/poppins_bold.ttf
-        - asset: fonts/poppins_bold_italic.ttf
-        - asset: fonts/poppins_extra_bold.ttf
-        - asset: fonts/poppins_extra_bold_italic
-        - asset: fonts/poppins_extra_light.ttf
-        - asset: fonts/poppins_extra_light_italic.ttf
-        - asset: fonts/poppins_italic.ttf
-        - asset: fonts/poppins_light.ttf
-        - asset: fonts/poppins_light_italic.ttf
-        - asset: fonts/poppins_medium.ttf
-        - asset: fonts/poppins_medium_italic.ttf
-        - asset: fonts/poppins_regular.ttf
-        - asset: fonts/poppins_semi_bold.ttf
-        - asset: fonts/poppins_semi_bold_italic.ttf
-        - asset: fonts/poppins_thin.ttf
-        - asset: fonts/poppins_thin_italic.ttf
-          style: italic
   # - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
