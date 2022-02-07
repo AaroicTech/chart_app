@@ -1,18 +1,28 @@
+import 'package:chart_app/screens/Bottom_nav_pages/detail_screen.dart';
 import 'package:chart_app/screens/home_screen/detail.dart';
 import 'package:chart_app/styles/colors.dart';
 import 'package:chart_app/styles/font.dart';
 import 'package:flutter/material.dart';
 
 class HomeNavPage extends StatefulWidget {
-  // final String id;
-  // final String title;
-  // final Image image;
-  // const HomeNavPage({
-  //   Key? key,
-  //   required this.id,
-  //   required this.title,
-  //   required this.image,
-  // }) : super(key: key);
+   final String id;
+  final String title;
+  final String image;
+
+  const HomeNavPage({Key? key, required this.id, 
+  required this.title, required this.image}) : super(key: key);
+
+  void selectedItem(BuildContext ctx) {
+    Navigator.of(ctx)
+        .pushNamed(
+          '/HomeNavPage',
+           arguments: {
+             'id': id, 
+             'title': title,
+             'image':image
+             }
+             );
+  }
 
   @override
   _HomeNavPageState createState() => _HomeNavPageState();
@@ -22,7 +32,6 @@ class _HomeNavPageState extends State<HomeNavPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     
       body: SingleChildScrollView(
         child: SafeArea(
           minimum: const EdgeInsets.only(top: 50),
@@ -36,23 +45,19 @@ class _HomeNavPageState extends State<HomeNavPage> {
                     children: [
                       Text(
                         'Home',
-                        style:textStyle7,
+                        style: textStyle7,
                       ),
                       const SizedBox(
-                        width: 165,
+                        width: 150,
                       ),
                       Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
                         height: 45,
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             const Icon(
                               Icons.add,
                               color: Colors.white,
-                            ),
-                            const SizedBox(
-                              width: 10,
                             ),
                             Text(
                               'Burk a walk',
@@ -155,7 +160,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                                   return GestureDetector(
                                     onTap: () {
                                       Navigator.pushNamed(
-                                          context, DetailPage.routnamed);
+                                          context, DetailScreen.routeNamed);
                                     },
                                     child: Container(
                                       child: Column(
