@@ -4,7 +4,15 @@ import 'package:chart_app/styles/font.dart';
 import 'package:flutter/material.dart';
 
 class HomeNavPage extends StatefulWidget {
-  const HomeNavPage({Key? key}) : super(key: key);
+  // final String id;
+  // final String title;
+  // final Image image;
+  // const HomeNavPage({
+  //   Key? key,
+  //   required this.id,
+  //   required this.title,
+  //   required this.image,
+  // }) : super(key: key);
 
   @override
   _HomeNavPageState createState() => _HomeNavPageState();
@@ -14,6 +22,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+     
       body: SingleChildScrollView(
         child: SafeArea(
           minimum: const EdgeInsets.only(top: 50),
@@ -27,18 +36,13 @@ class _HomeNavPageState extends State<HomeNavPage> {
                     children: [
                       Text(
                         'Home',
-                        style: TextStyle(
-                          fontSize: 35,
-                          color: black,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style:textStyle7,
                       ),
                       const SizedBox(
-                        width: 150,
+                        width: 165,
                       ),
                       Container(
                         height: 45,
-                        // width: 40,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -55,7 +59,8 @@ class _HomeNavPageState extends State<HomeNavPage> {
                               style: TextStyle(
                                 fontSize: 15,
                                 color: white,
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: -0.41,
                               ),
                             ),
                           ],
@@ -77,9 +82,9 @@ class _HomeNavPageState extends State<HomeNavPage> {
                         child: Text(
                           'Explore dog walkers',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 17,
                             color: grey,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ),
@@ -125,7 +130,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                       style: textStyle3,
                     ),
                     const SizedBox(
-                      width: 155,
+                      width: 190,
                     ),
                     Text(
                       'View off',
@@ -136,7 +141,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                 Column(
                   children: [
                     Card(
-                      elevation: 3,
+                      elevation: 1,
                       child: Column(
                         children: [
                           Container(
@@ -163,7 +168,8 @@ class _HomeNavPageState extends State<HomeNavPage> {
                                             height: 120,
                                             width: 170,
                                             margin: const EdgeInsets.only(
-                                                right: 20),
+                                              right: 20,
+                                            ),
                                             decoration: BoxDecoration(
                                               image: const DecorationImage(
                                                 image: AssetImage(
@@ -175,7 +181,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                                                   BorderRadius.circular(10),
                                             ),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 15,
                                           ),
                                           Container(
@@ -189,7 +195,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                                                   "Mason York",
                                                   style: textStyle5,
                                                 ),
-                                                SizedBox(
+                                                const SizedBox(
                                                   width: 20,
                                                 ),
                                                 Container(
@@ -232,13 +238,15 @@ class _HomeNavPageState extends State<HomeNavPage> {
                     ),
                     Row(
                       children: [
-                        const Padding(padding: EdgeInsets.all(10)),
+                        const Padding(
+                          padding: EdgeInsets.all(10),
+                        ),
                         Text(
                           'Suggested',
                           style: textStyle3,
                         ),
                         const SizedBox(
-                          width: 155,
+                          width: 170,
                         ),
                         Text(
                           'View off',
@@ -247,7 +255,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                       ],
                     ),
                     Card(
-                      elevation: 3,
+                      elevation: 1,
                       child: Column(
                         children: [
                           Container(
@@ -286,7 +294,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                                                   BorderRadius.circular(10),
                                             ),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 15,
                                           ),
                                           Container(

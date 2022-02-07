@@ -31,11 +31,7 @@ class _HomeState extends State<ChartScreen> {
               padding: const EdgeInsets.only(right: 310),
               child: Text(
                 'Chat',
-                style: TextStyle(
-                  fontSize: 30,
-                  color: black,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: textStyle7,
               ),
             ),
             Container(

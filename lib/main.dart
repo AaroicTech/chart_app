@@ -1,5 +1,6 @@
 import 'package:chart_app/screens/Bottom_nav_pages/Chart/chart_screen.dart';
 import 'package:chart_app/screens/Bottom_nav_pages/Chart/charting_screen.dart';
+import 'package:chart_app/screens/Bottom_nav_pages/detail_screen.dart';
 import 'package:chart_app/screens/auth_screen/sign_up.dart';
 import 'package:chart_app/screens/home_screen/home.dart';
 import 'package:chart_app/screens/splash_screen.dart';
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
         Home.routeName: (context) => Home(),
         ChartScreen.routeName: (context) => ChartScreen(),
         ChartingScreen.routnamed: (context) => ChartingScreen(),
-        DetailPage.routnamed: (context) => DetailPage()
+        DetailPage.routnamed: (context) => DetailPage(),
+       '/navigator': (ctx) => DetailScreen(id: 'id', title: 'title', image: 'image')
       },
     );
   }

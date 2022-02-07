@@ -56,9 +56,10 @@ class _SignUpState extends State<SignUp> {
                       Text(
                         'Lets start here',
                         style: TextStyle(
-                          color: black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 33,
+                          color: Colors.black,
+                          fontSize: 34,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: -0.41,
                         ),
                       ),
                       const SizedBox(
@@ -68,8 +69,8 @@ class _SignUpState extends State<SignUp> {
                         'Fill in your details to begin',
                         style: TextStyle(
                           color: black45,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 17,
                         ),
                       ),
                     ],
@@ -195,10 +196,13 @@ class _SignUpState extends State<SignUp> {
                             onPressed: () {
                               Navigator.pushNamed(context, Home.routeName);
                             },
-                            child: Text(
+                            child: const Text(
                               'Sign up',
                               style: TextStyle(
-                                color: white,
+                                color: Colors.white,
+                                fontSize: 17,
+                                fontWeight: FontWeight.w700,
+                                letterSpacing: -0.41,
                               ),
                             ),
                           ),
@@ -220,14 +224,20 @@ class _SignUpState extends State<SignUp> {
                                     TextSpan(
                                       text: ' By signing in, i agree with',
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black38),
+                                        color: Colors.black26,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: -0.41,
+                                      ),
                                     ),
                                     TextSpan(
                                       text: ' teams of use',
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black),
+                                        color: Colors.black,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: -0.41,
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -244,14 +254,20 @@ class _SignUpState extends State<SignUp> {
                                   TextSpan(
                                     text: 'and',
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black54),
+                                      color: Colors.black,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500,
+                                      letterSpacing: -0.41,
+                                    ),
                                   ),
                                   TextSpan(
                                     text: ' privacy policy',
                                     style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
+                                      color: Colors.black,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500,
+                                      letterSpacing: -0.41,
+                                    ),
                                   ),
                                 ],
                               ),

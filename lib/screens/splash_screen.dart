@@ -4,6 +4,7 @@ import 'package:chart_app/screens/auth_screen/sign_up.dart';
 import 'package:chart_app/styles/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -69,9 +70,10 @@ class OnboardingScreen extends StatelessWidget {
                             child: Text(
                               '1',
                               style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20,
                                 color: Colors.black,
+                                fontSize: 13,
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: -0.41,
                               ),
                             ),
                           ),
@@ -86,9 +88,10 @@ class OnboardingScreen extends StatelessWidget {
                             child: Text(
                               '2',
                               style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20,
                                 color: Colors.white,
+                                fontSize: 13,
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: -0.41,
                               ),
                             ),
                           ),
@@ -102,9 +105,10 @@ class OnboardingScreen extends StatelessWidget {
                             child: Text(
                               '3',
                               style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20,
                                 color: Colors.white,
+                                fontSize: 13,
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: -0.41,
                               ),
                             ),
                           ),
@@ -112,12 +116,16 @@ class OnboardingScreen extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(top: 20),
-                      child: const Text(
-                        "Too tired to walk your dog?",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
+                      margin: const EdgeInsets.only(top: 1),
+                      child: const Center(
+                        child: Text(
+                          "Too tired to walk your dog?",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: -0.0041,
+                          ),
                         ),
                       ),
                     ),
@@ -128,7 +136,9 @@ class OnboardingScreen extends StatelessWidget {
                       "Let's help you!",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: 22,
+                        fontWeight: FontWeight.w700,
+                        letterSpacing: -0.0041,
                       ),
                     ),
                   ],
@@ -136,50 +146,56 @@ class OnboardingScreen extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
-            Expanded(
-              child: Container(
-                height: 60,
-                //  width: 400,
-                // padding: EdgeInsets.all(10),
-                margin: const EdgeInsets.all(8),
-                child: Center(
-                  child: TextButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, SignUp.routeName);
-                    },
-                    child: const Text(
-                      'Join our community',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                      ),
+            Container(
+              height: 20,
+              //  width: 400,
+              // padding: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(8),
+              child: Center(
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, SignUp.routeName);
+                  },
+                  child: const Text(
+                    'Join our community',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: -0.0041,
                     ),
                   ),
                 ),
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  color: deepOrange,
-                  borderRadius: BorderRadius.circular(10),
-                ),
+              ),
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                color: deepOrange,
+                borderRadius: BorderRadius.circular(10),
               ),
             ),
             TextButton(
               onPressed: () {},
               child: RichText(
                 text: const TextSpan(
-                  text: 'Don\'t have an account?  ',
+                  text: 'Already a member?  ',
                   // style: DefaultTextStyle.of(context).style,
                   style: TextStyle(
-                    fontSize: 18,
+                    color: Colors.white,
+                    fontSize: 13,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: -0.41,
                   ),
                   children: <TextSpan>[
                     TextSpan(
                       text: 'Sign in',
                       style: TextStyle(
-                          fontWeight: FontWeight.bold, color: Colors.red),
+                        color: Colors.red,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w700,
+                        letterSpacing: -0.41,
+                      ),
                     ),
                   ],
                 ),

@@ -45,7 +45,7 @@ class _ChartingScreenState extends State<ChartingScreen> {
                     'Ajes Mumey',
                     style: TextStyle(
                       color: black,
-                      fontSize: 22,
+                      fontSize: 17,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
