@@ -5,24 +5,29 @@ import 'package:chart_app/styles/font.dart';
 import 'package:flutter/material.dart';
 
 class HomeNavPage extends StatefulWidget {
-   final String id;
-  final String title;
-  final String image;
+  // final String id;
+  // final String title;
+  // final String image;
 
-  const HomeNavPage({Key? key, required this.id, 
-  required this.title, required this.image}) : super(key: key);
+  // const HomeNavPage({
+  //   Key? key,
+  //   required this.id,
+  //   required this.title,
+  //   required this.image,
+  // }) : super(key: key);
 
-  void selectedItem(BuildContext ctx) {
-    Navigator.of(ctx)
-        .pushNamed(
-          '/HomeNavPage',
-           arguments: {
-             'id': id, 
-             'title': title,
-             'image':image
-             }
-             );
-  }
+  // void selectedItem(BuildContext ctx) {
+  //   Navigator.of(ctx)
+  //       .pushNamed(
+  //         '/HomeNavPage',
+  //          arguments: {
+  //            'id': id,
+  //            'title': title,
+  //            'image':image
+  //            }
+  //            );
+  // }
+  static const routeNamed = '/HomeNavPage';
 
   @override
   _HomeNavPageState createState() => _HomeNavPageState();
@@ -31,6 +36,11 @@ class HomeNavPage extends StatefulWidget {
 class _HomeNavPageState extends State<HomeNavPage> {
   @override
   Widget build(BuildContext context) {
+    // print(widget.title);
+    // print(widget.id);
+
+    // print(widget.image);
+
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
@@ -50,29 +60,32 @@ class _HomeNavPageState extends State<HomeNavPage> {
                       const SizedBox(
                         width: 150,
                       ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        height: 45,
-                        child: Row(
-                          children: [
-                            const Icon(
-                              Icons.add,
-                              color: Colors.white,
-                            ),
-                            Text(
-                              'Burk a walk',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: white,
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: -0.41,
+                      GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          height: 45,
+                          child: Row(
+                            children: [
+                              const Icon(
+                                Icons.add,
+                                color: Colors.white,
                               ),
-                            ),
-                          ],
-                        ),
-                        decoration: BoxDecoration(
-                          color: deepOrange,
-                          borderRadius: BorderRadius.circular(10),
+                              Text(
+                                'Burk a walk',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: white,
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: -0.41,
+                                ),
+                              ),
+                            ],
+                          ),
+                          decoration: BoxDecoration(
+                            color: deepOrange,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
                         ),
                       ),
                     ],
@@ -135,7 +148,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                       style: textStyle3,
                     ),
                     const SizedBox(
-                      width: 190,
+                      width: 218,
                     ),
                     Text(
                       'View off',
@@ -160,7 +173,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                                   return GestureDetector(
                                     onTap: () {
                                       Navigator.pushNamed(
-                                          context, DetailScreen.routeNamed);
+                                          context, DetailPage.routnamed);
                                     },
                                     child: Container(
                                       child: Column(
@@ -251,7 +264,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                           style: textStyle3,
                         ),
                         const SizedBox(
-                          width: 170,
+                          width: 200,
                         ),
                         Text(
                           'View off',

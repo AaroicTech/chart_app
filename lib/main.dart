@@ -6,8 +6,6 @@ import 'package:chart_app/screens/auth_screen/sign_up.dart';
 import 'package:chart_app/screens/home_screen/home.dart';
 import 'package:chart_app/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'screens/Bottom_nav_pages/profile_nav.dart';
-import 'screens/home_screen/detail.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,16 +17,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: OnboardingScreen(),
+      home: const OnboardingScreen(),
       routes: {
         SignUp.routeName: (context) => SignUp(),
-        Home.routeName: (context) => Home(),
+        Home.routeName: (context) => const Home(),
         ChartScreen.routeName: (context) => ChartScreen(),
         ChartingScreen.routnamed: (context) => ChartingScreen(),
-       // DetailScreen().
-       //'/navigator': (ctx) => DetailScreen(id: 'id', title: 'title', image: 'image')
-       '/HomeNavPage': (ctx ) => HomeNavPage(
-         id: 'id', title: 'title', image: 'image',),
+        DetailScreen.routeNamed: (ctx) => DetailScreen(),
+        HomeNavPage.routeNamed: (ctx) => HomeNavPage(),
       },
     );
   }

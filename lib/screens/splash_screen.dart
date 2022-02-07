@@ -61,7 +61,7 @@ class OnboardingScreen extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      padding: const EdgeInsets.only(top: 500, left: 130),
+                      padding: const EdgeInsets.only(top: 490, left: 130),
                       child: Row(
                         children: [
                           const CircleAvatar(
@@ -115,6 +115,9 @@ class OnboardingScreen extends StatelessWidget {
                         ],
                       ),
                     ),
+                    const SizedBox(
+                      height: 12,
+                    ),
                     Container(
                       margin: const EdgeInsets.only(top: 1),
                       child: const Center(
@@ -145,13 +148,10 @@ class OnboardingScreen extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
-              height: 10,
+            const SizedBox(
+              height: 4,
             ),
             Container(
-              height: 20,
-              //  width: 400,
-              // padding: EdgeInsets.all(10),
               margin: const EdgeInsets.all(8),
               child: Center(
                 child: TextButton(
@@ -180,7 +180,6 @@ class OnboardingScreen extends StatelessWidget {
               child: RichText(
                 text: const TextSpan(
                   text: 'Already a member?  ',
-                  // style: DefaultTextStyle.of(context).style,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 13,

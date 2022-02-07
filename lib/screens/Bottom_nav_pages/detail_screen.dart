@@ -1,4 +1,4 @@
-import 'package:chart_app/Model/detail_data.dart';
+import 'package:chart_app/screens/Bottom_nav_pages/home_nav.dart';
 import 'package:flutter/material.dart';
 
 class DetailScreen extends StatefulWidget {
@@ -11,7 +11,7 @@ class DetailScreen extends StatefulWidget {
   //   required this.title,
   //   required this.image,
   // }) : super(key: key);
-   static const routeNamed = 'DetailScreen';
+  static const routeNamed = 'DetailScreen';
 
   @override
   _DetailScreenState createState() => _DetailScreenState();
@@ -20,16 +20,14 @@ class DetailScreen extends StatefulWidget {
 class _DetailScreenState extends State<DetailScreen> {
   @override
   Widget build(BuildContext context) {
-    final routeArgs =
-        ModalRoute.of(context)!.settings.arguments as Map<String, String>;
-    final ChatDetailTitle = routeArgs['title'];
-    final ChatDetailId = routeArgs['id'];
-
-
+    // final routeArgs =
+    //     ModalRoute.of(context)!.settings.arguments as Map<String, String>;
+    // final arguments = routeArgs['title'];
+    // final HomeNavPageTitle = routeArgs['id'];
     return Scaffold(
       appBar: AppBar(
-        title: Text(''),
-      ),
+           title: Text('title'),
+          ),
     );
   }
 }

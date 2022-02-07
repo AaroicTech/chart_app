@@ -19,9 +19,9 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final List<Widget> _pages = [
     HomeNavPage(
-      id: DateTime.now().toString(),
-      title: 'Detail',
-      image: 'image',
+      // id: DateTime.now().toString(),
+      // title: 'Detail',
+      // image: 'image',
     ),
     Profile(),
     ChartScreen(),

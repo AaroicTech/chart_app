@@ -3,7 +3,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatefulWidget {
-  const DetailPage({Key? key}) : super(key: key);
+  // final String id;
+  // final String title;
+  // final String image;
+
+  // const DetailPage({
+  //   Key? key,
+  //   required this.id,
+  //   required this.title,
+  //   required this.image,
+  // }) : super(key: key);
   static const routnamed = 'Profile';
 
   @override

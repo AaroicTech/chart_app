@@ -1,14 +1,15 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
+// import 'package:flutter/cupertino.dart';
+// import 'package:flutter/foundation.dart';
 
-class ChatDetail {
-  final String id;
-  final String title;
-  final Image image;
+// class ChatDetail {
+//   final String id;
+//   final String title;
+//   final Image image;
 
-  ChatDetail(
-    this.image, {
-    required this.id,
-    required this.title,
-  });
-}
+//   ChatDetail(
+//    {
+//     required this.id,
+//     required this.title,
+//       required this.image,
+//   });
+// }
