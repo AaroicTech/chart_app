@@ -65,7 +65,12 @@ class _HomeState extends State<ChartScreen> {
                   (index) {
                     return GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, ChartingScreen.routnamed);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => ChartingScreen(),
+                          ),
+                        );
                       },
                       child: Card(
                         child: ListTile(

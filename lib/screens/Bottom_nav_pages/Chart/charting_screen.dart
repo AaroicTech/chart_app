@@ -65,10 +65,11 @@ class _ChartingScreenState extends State<ChartingScreen> {
               ),
               Container(
                 margin: const EdgeInsets.only(top: 30),
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: Column(
                   children: [
                     Container(
+                      padding: EdgeInsets.only(left: 60),
                       child: const Text('1 hr ago 12:04'),
                     ),
                     const SizedBox(
@@ -76,7 +77,7 @@ class _ChartingScreenState extends State<ChartingScreen> {
                     ),
                     Container(
                       alignment: Alignment.topRight,
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
                       decoration: BoxDecoration(
                         color: white,
                         borderRadius: BorderRadius.circular(8),
@@ -139,10 +140,10 @@ class _ChartingScreenState extends State<ChartingScreen> {
                       ),
                     ),
                     const SizedBox(
-                      height: 100,
+                      height: 220,
                     ),
                     Container(
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       margin: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         color: black12,

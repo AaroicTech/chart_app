@@ -1,34 +1,12 @@
-import 'package:chart_app/screens/Bottom_nav_pages/detail_screen.dart';
-import 'package:chart_app/screens/home_screen/detail.dart';
+import 'package:chart_app/Model/data_model.dart';
+
 import 'package:chart_app/styles/colors.dart';
 import 'package:chart_app/styles/font.dart';
 import 'package:flutter/material.dart';
 
+import 'detail_screen.dart';
+
 class HomeNavPage extends StatefulWidget {
-  // final String id;
-  // final String title;
-  // final String image;
-
-  // const HomeNavPage({
-  //   Key? key,
-  //   required this.id,
-  //   required this.title,
-  //   required this.image,
-  // }) : super(key: key);
-
-  // void selectedItem(BuildContext ctx) {
-  //   Navigator.of(ctx)
-  //       .pushNamed(
-  //         '/HomeNavPage',
-  //          arguments: {
-  //            'id': id,
-  //            'title': title,
-  //            'image':image
-  //            }
-  //            );
-  // }
-  static const routeNamed = '/HomeNavPage';
-
   @override
   _HomeNavPageState createState() => _HomeNavPageState();
 }
@@ -36,11 +14,6 @@ class HomeNavPage extends StatefulWidget {
 class _HomeNavPageState extends State<HomeNavPage> {
   @override
   Widget build(BuildContext context) {
-    // print(widget.title);
-    // print(widget.id);
-
-    // print(widget.image);
-
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
@@ -61,7 +34,18 @@ class _HomeNavPageState extends State<HomeNavPage> {
                         width: 150,
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => DetailPage(
+                                id: 'id',
+                                title: 'title',
+                                image: 'image',
+                              ),
+                            ),
+                          );
+                        },
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10),
                           height: 45,
@@ -168,12 +152,23 @@ class _HomeNavPageState extends State<HomeNavPage> {
                             child: ListView(
                               scrollDirection: Axis.horizontal,
                               children: List.generate(
-                                10,
+                                data1.length,
                                 (index) {
+                                  final modelData = data1[index];
                                   return GestureDetector(
                                     onTap: () {
-                                      Navigator.pushNamed(
-                                          context, DetailPage.routnamed);
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (_) => DetailPage(
+                                            title:
+                                                modelData['title'].toString(),
+                                            id: modelData['id'].toString(),
+                                            image:
+                                                modelData['image'].toString(),
+                                          ),
+                                        ),
+                                      );
                                     },
                                     child: Container(
                                       child: Column(
@@ -189,9 +184,9 @@ class _HomeNavPageState extends State<HomeNavPage> {
                                               right: 20,
                                             ),
                                             decoration: BoxDecoration(
-                                              image: const DecorationImage(
+                                              image: DecorationImage(
                                                 image: AssetImage(
-                                                  'assets/Frame 33553.png',
+                                                  modelData['image'].toString(),
                                                 ),
                                                 fit: BoxFit.cover,
                                               ),
@@ -210,7 +205,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  "Mason York",
+                                                  modelData['title'].toString(),
                                                   style: textStyle5,
                                                 ),
                                                 const SizedBox(
@@ -228,7 +223,8 @@ class _HomeNavPageState extends State<HomeNavPage> {
                                                   ),
                                                   child: Center(
                                                     child: Text(
-                                                      'S3/h',
+                                                      modelData['time']
+                                                          .toString(),
                                                       style: textStyle6,
                                                     ),
                                                   ),
@@ -282,12 +278,23 @@ class _HomeNavPageState extends State<HomeNavPage> {
                             child: ListView(
                               scrollDirection: Axis.horizontal,
                               children: List.generate(
-                                10,
+                                data2.length,
                                 (index) {
+                                  final modelData = data2[index];
                                   return GestureDetector(
                                     onTap: () {
-                                      Navigator.pushNamed(
-                                          context, DetailPage.routnamed);
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (_) => DetailPage(
+                                            title:
+                                                modelData['title'].toString(),
+                                            id: modelData['id'].toString(),
+                                            image:
+                                                modelData['image'].toString(),
+                                          ),
+                                        ),
+                                      );
                                     },
                                     child: Container(
                                       child: Column(
@@ -302,9 +309,9 @@ class _HomeNavPageState extends State<HomeNavPage> {
                                             margin: const EdgeInsets.only(
                                                 right: 20),
                                             decoration: BoxDecoration(
-                                              image: const DecorationImage(
+                                              image: DecorationImage(
                                                 image: AssetImage(
-                                                  'assets/Frame 33546.png',
+                                                  modelData['image'].toString(),
                                                 ),
                                                 fit: BoxFit.cover,
                                               ),
@@ -323,7 +330,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  "Mason York",
+                                                  modelData['title'].toString(),
                                                   style: textStyle5,
                                                 ),
                                                 SizedBox(
@@ -341,7 +348,8 @@ class _HomeNavPageState extends State<HomeNavPage> {
                                                   ),
                                                   child: Center(
                                                     child: Text(
-                                                      'S3/h',
+                                                      modelData['time']
+                                                          .toString(),
                                                       style: textStyle6,
                                                     ),
                                                   ),
@@ -350,7 +358,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                                             ),
                                           ),
                                           Text(
-                                            "2 km from you",
+                                            "${modelData['distance']} from you",
                                             style: textStyle2,
                                           ),
                                         ],

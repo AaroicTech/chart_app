@@ -8,7 +8,6 @@ import 'package:flutter/painting.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
-  static const routeName = '/onboarding_screen';
 
   @override
   Widget build(BuildContext context) {
@@ -156,7 +155,12 @@ class OnboardingScreen extends StatelessWidget {
               child: Center(
                 child: TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, SignUp.routeName);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => SignUp(),
+                      ),
+                    );
                   },
                   child: const Text(
                     'Join our community',

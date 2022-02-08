@@ -18,14 +18,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: const OnboardingScreen(),
-      routes: {
-        SignUp.routeName: (context) => SignUp(),
-        Home.routeName: (context) => const Home(),
-        ChartScreen.routeName: (context) => ChartScreen(),
-        ChartingScreen.routnamed: (context) => ChartingScreen(),
-        DetailScreen.routeNamed: (ctx) => DetailScreen(),
-        HomeNavPage.routeNamed: (ctx) => HomeNavPage(),
-      },
+      // routes: {
+      //   SignUp.routeName: (context) => SignUp(),
+      //   Home.routeName: (context) => const Home(),
+      //   ChartScreen.routeName: (context) => ChartScreen(),
+      //   ChartingScreen.routnamed: (context) => ChartingScreen(),
+      //   DetailScreen.routeNamed: (ctx) => DetailScreen(),
+      //   HomeNavPage.routeNamed: (ctx) => HomeNavPage(),
+      // },
     );
   }
 }
