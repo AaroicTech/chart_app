@@ -53,3 +53,34 @@ final data2 = [
     'time': 'S2/h'
   },
 ];
+final data3 = [
+  {
+    'id': 1,
+    'image': 'assets/Frame 33546.png',
+    'title': 'Mark Greene',
+    'messages': 'Hello friend its been a while',
+    'time':  DateTime.now()
+  },
+  {
+    'id': 2,
+    'image': 'assets/Frame 33553.png',
+    'title': 'Trina Kain ',
+   'messages': 'Hello',
+    'time': DateTime.now()
+  },
+  {
+    'id': 3,
+    'image': 'assets/image.png',
+    'title': 'Alex Murray',
+    'messages': 'Hello',
+    'time':  DateTime.now()
+  },
+  {
+    'id': 4,
+    'image': 'assets/Frame 33553.png',
+    'title': 'Rose Matt.',
+    'messages': 'Hello',
+    'time':  DateTime.now()
+  },
+];
+

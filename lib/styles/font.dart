@@ -5,14 +5,14 @@ import 'colors.dart';
 final textStyle1 = TextStyle(
   fontWeight: FontWeight.bold,
   color: black,
-  fontSize: 15,
+  // fontSize: 15,
 );
 
 final textStyle2 = TextStyle(
   fontWeight: FontWeight.w500,
   color: black26,
-  fontSize: 17,
-  letterSpacing: -0.41,
+  // fontSize: 17,
+  // letterSpacing: -0.41,
 );
 
 final textStyle3 = TextStyle(

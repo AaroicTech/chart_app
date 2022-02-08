@@ -6,6 +6,7 @@ import 'package:chart_app/styles/colors.dart';
 import 'package:chart_app/styles/font.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -36,33 +37,32 @@ class _HomeState extends State<Home> {
           });
           print(value);
         },
-        iconSize: 25,
+        iconSize: 16,
         selectedFontSize: 15,
-        unselectedFontSize: 25,
-        selectedLabelStyle: textStyle1,
-        unselectedLabelStyle: textStyle2,
+        currentIndex: _selectedPage,
+        unselectedFontSize: 12,
+        type: BottomNavigationBarType.fixed,
+        // selectedLabelStyle: textStyle1,
+        // unselectedLabelStyle: textStyle2,
         selectedItemColor: black,
         unselectedItemColor: black26,
         showSelectedLabels: true,
         showUnselectedLabels: true,
-        backgroundColor: red,
+        // backgroundColor: red,
         items: [
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: black,
-              size: 25,
             ),
             title: const Text(
               'Home',
+              
             ),
           ),
           BottomNavigationBarItem(
             backgroundColor: red,
             icon: Icon(
               Icons.group,
-              color: black26,
-              size: 25,
             ),
             title: const Text(
               'Moment',
@@ -71,8 +71,6 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.send,
-              color: black26,
-              size: 25,
             ),
             title: const Text(
               'Chat',
@@ -81,8 +79,6 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.person,
-              color: black26,
-              size: 25,
             ),
             title: const Text(
               'Profile',

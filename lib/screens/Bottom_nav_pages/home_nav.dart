@@ -1,9 +1,7 @@
 import 'package:chart_app/Model/data_model.dart';
-
 import 'package:chart_app/styles/colors.dart';
 import 'package:chart_app/styles/font.dart';
 import 'package:flutter/material.dart';
-
 import 'detail_screen.dart';
 
 class HomeNavPage extends StatefulWidget {
@@ -136,7 +134,12 @@ class _HomeNavPageState extends State<HomeNavPage> {
                     ),
                     Text(
                       'View off',
-                      style: textStyle4,
+                      style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        fontWeight: FontWeight.w500,
+                        color: black26,
+                        fontSize: 14,
+                      ),
                     ),
                   ],
                 ),
@@ -264,7 +267,12 @@ class _HomeNavPageState extends State<HomeNavPage> {
                         ),
                         Text(
                           'View off',
-                          style: textStyle4,
+                          style: TextStyle(
+                            decoration: TextDecoration.underline,
+                            fontWeight: FontWeight.w500,
+                            color: black26,
+                            fontSize: 14,
+                          ),
                         ),
                       ],
                     ),
@@ -333,7 +341,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                                                   modelData['title'].toString(),
                                                   style: textStyle5,
                                                 ),
-                                                SizedBox(
+                                                const SizedBox(
                                                   width: 20,
                                                 ),
                                                 Container(

@@ -1,3 +1,4 @@
+import 'package:chart_app/Model/data_model.dart';
 import 'package:chart_app/screens/Bottom_nav_pages/Chart/charting_screen.dart';
 import 'package:chart_app/styles/colors.dart';
 import 'package:chart_app/styles/font.dart';
@@ -7,8 +8,6 @@ import 'package:flutter/material.dart';
 
 class ChartScreen extends StatefulWidget {
   ChartScreen({Key? key}) : super(key: key);
-
-  static const routeName = 'Chart_screen';
 
   final TextEditingController _search = TextEditingController();
 
@@ -61,25 +60,34 @@ class _HomeState extends State<ChartScreen> {
             Expanded(
               child: ListView(
                 children: List.generate(
-                  20,
+                  data3.length,
                   (index) {
+                    final modelData = data3[index];
                     return GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (_) => ChartingScreen(),
+                            builder: (_) => ChartingScreen(
+                              id: modelData['id'].toString(),
+                              title: modelData['title'].toString(),
+                              image: modelData['image'].toString(),
+                              message: modelData['message'].toString(),
+                            ),
                           ),
                         );
                       },
                       child: Card(
                         child: ListTile(
-                          leading: const CircleAvatar(
+                          contentPadding: EdgeInsets.all(10),
+                          leading: CircleAvatar(
                             radius: 40,
-                            backgroundImage: AssetImage('assets/IMAGE.png'),
+                            backgroundImage: AssetImage(
+                              modelData['image'].toString(),
+                            ),
                           ),
                           title: Text(
-                            'Will Knowles ',
+                            modelData['title'].toString(),
                             style: textStyle3,
                           ),
                           subtitle: Text(
