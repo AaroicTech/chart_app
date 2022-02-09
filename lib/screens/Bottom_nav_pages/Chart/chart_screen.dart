@@ -91,7 +91,7 @@ class _HomeState extends State<ChartScreen> {
                             style: textStyle3,
                           ),
                           subtitle: Text(
-                            'Hi! how\s your dog - 1min',
+                            modelData['message'].toString(),
                             style: textStyle2,
                           ),
                         ),

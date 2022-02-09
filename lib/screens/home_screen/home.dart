@@ -11,8 +11,6 @@ import 'package:flutter/painting.dart';
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
-  static const routeName = 'Home_screen';
-
   @override
   _HomeState createState() => _HomeState();
 }

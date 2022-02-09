@@ -1,4 +1,5 @@
 import 'package:chart_app/Model/data_model.dart';
+import 'package:chart_app/screens/home_screen/search.dart';
 import 'package:chart_app/styles/colors.dart';
 import 'package:chart_app/styles/font.dart';
 import 'package:flutter/material.dart';
@@ -99,12 +100,18 @@ class _HomeNavPageState extends State<HomeNavPage> {
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: TextFormField(
+                            readOnly: true,
                             decoration: InputDecoration(
                               border: InputBorder.none,
                               hintText: 'Cyv Ubaclre',
-                              prefixIcon: Icon(
-                                Icons.search,
-                                color: grey,
+                              prefixIcon: IconButton(
+                                onPressed: () {
+                                 showSearch(
+                          context: context,
+                          delegate: CustomSearchDelegate(),
+                        );
+                                },
+                                icon: const Icon(Icons.search),
                               ),
                               suffixIcon: Icon(
                                 Icons.group,

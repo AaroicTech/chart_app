@@ -35,16 +35,19 @@ class _ChartingScreenState extends State<ChartingScreen> {
               slivers: [
                 // SliverAppBar(
                 //   title: Text("Chat"),
-                //   expandedHeight: 50,
+                //   expandedHeight: 100,
                 //   flexibleSpace: Container(
-                //     margin: const EdgeInsets.only(top: 50),
-                //     child: CircleAvatar(),
+                //     margin: const EdgeInsets.only(top: 60),
+                //     child: CircleAvatar(
+                // radius:30),
                 //   ),
                 // ),
                 SliverToBoxAdapter(
+
                   child: Column(
                     children: [
                       ListTile(
+                        
                         contentPadding: const EdgeInsets.all(10),
                         leading: IconButton(
                           onPressed: () {
@@ -85,7 +88,10 @@ class _ChartingScreenState extends State<ChartingScreen> {
                           ),
                         ),
                       ),
-                      const Text('1 hr ago'),
+                      Container(
+                        padding: const EdgeInsets.only(left: 40),
+                        child: const Text('1 hr ago'),
+                      ),
                       const SizedBox(
                         height: 10,
                       ),
@@ -129,7 +135,11 @@ class _ChartingScreenState extends State<ChartingScreen> {
                       const SizedBox(
                         height: 15,
                       ),
-                      const Text('1 hr ago'),
+                      Container(
+                        //alignment: Alignment.topRight,
+                        padding: const EdgeInsets.only(left: 40),
+                        child: const Text('10:30'),
+                      ),
                       const SizedBox(
                         height: 15,
                       ),
