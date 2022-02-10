@@ -51,7 +51,7 @@ class _SignUpState extends State<SignUp> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(
+                     const Text(
                         'Lets start here',
                         style: TextStyle(
                           color: Colors.black,

@@ -18,7 +18,14 @@ class _HomeState extends State<Home> {
     HomeNavPage(),
     Moment(),
     ChartScreen(),
-    ProfileNavPage()
+    ProfileNavPage(
+      // title: mod'',
+      // id: '',
+      // image: ''
+      id: 'id',
+      title: 'title',
+      image: 'image',
+    )
   ];
   int _selectedPage = 0;
 
