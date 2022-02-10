@@ -8,7 +8,7 @@ class CustomSearchDelegate extends SearchDelegate {
       IconButton(
         icon: const Icon(Icons.clear),
         onPressed: () {
-         // clear(contex, null);
+          query = '';
         },
       ),
     ];

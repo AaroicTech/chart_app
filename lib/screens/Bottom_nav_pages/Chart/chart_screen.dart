@@ -2,7 +2,6 @@ import 'package:chart_app/Model/data_model.dart';
 import 'package:chart_app/screens/Bottom_nav_pages/Chart/charting_screen.dart';
 import 'package:chart_app/styles/colors.dart';
 import 'package:chart_app/styles/font.dart';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +26,7 @@ class _HomeState extends State<ChartScreen> {
         child: Column(
           children: [
             Container(
-              padding: const EdgeInsets.only(right: 310),
+              padding: const EdgeInsets.only(right: 300),
               child: Text(
                 'Chat',
                 style: textStyle7,
@@ -79,7 +78,7 @@ class _HomeState extends State<ChartScreen> {
                       },
                       child: Card(
                         child: ListTile(
-                          contentPadding: EdgeInsets.all(10),
+                          contentPadding: const EdgeInsets.all(8),
                           leading: CircleAvatar(
                             radius: 40,
                             backgroundImage: AssetImage(

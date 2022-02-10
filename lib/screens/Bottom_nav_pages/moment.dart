@@ -1,23 +1,28 @@
 import 'package:chart_app/styles/colors.dart';
+import 'package:chart_app/styles/font.dart';
 import 'package:flutter/material.dart';
 
-class Profile extends StatefulWidget {
-  const Profile({Key? key}) : super(key: key);
+class Moment extends StatefulWidget {
+  const Moment({Key? key}) : super(key: key);
 
   @override
-  _ProfileState createState() => _ProfileState();
+  _MomentState createState() => _MomentState();
 }
 
-class _ProfileState extends State<Profile> {
+class _MomentState extends State<Moment> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text('Moment'),
         backgroundColor: deepOrange,
       ),
       body: Center(
-        child: Text('data'),
+        child: Text(
+          'Moment',
+          style: textStyle5,
+        ),
       ),
     );
   }

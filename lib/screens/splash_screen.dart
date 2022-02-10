@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:chart_app/screens/auth_screen/sign_up.dart';
 import 'package:chart_app/styles/colors.dart';
 import 'package:flutter/cupertino.dart';
@@ -13,6 +12,8 @@ class OnboardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
         padding: const EdgeInsets.all(10),
         decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -60,58 +61,61 @@ class OnboardingScreen extends StatelessWidget {
                 Column(
                   children: [
                     Container(
-                      padding: const EdgeInsets.only(top: 490, left: 130),
-                      child: Row(
-                        children: [
-                          const CircleAvatar(
-                            radius: 20,
-                            backgroundColor: Colors.white,
-                            child: Text(
-                              '1',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 13,
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: -0.41,
+                      padding: const EdgeInsets.only(top: 490, left: 105),
+                      child: Center(
+                        child: Row(
+                          
+                          children: [
+                            const CircleAvatar(
+                              radius: 20,
+                              backgroundColor: Colors.white,
+                              child: Text(
+                                '1',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: -0.41,
+                                ),
                               ),
                             ),
-                          ),
-                          Divider(
-                            height: 40,
-                            color: white,
-                            indent: 10,
-                          ),
-                          const CircleAvatar(
-                            radius: 20,
-                            backgroundColor: Colors.white24,
-                            child: Text(
-                              '2',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 13,
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: -0.41,
+                            Divider(
+                              height: 40,
+                              color: white,
+                              indent: 10,
+                            ),
+                            const CircleAvatar(
+                              radius: 20,
+                              backgroundColor: Colors.white24,
+                              child: Text(
+                                '2',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: -0.41,
+                                ),
                               ),
                             ),
-                          ),
-                          Divider(
-                            color: white,
-                            indent: 10,
-                          ),
-                          const CircleAvatar(
-                            radius: 20,
-                            backgroundColor: Colors.white24,
-                            child: Text(
-                              '3',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 13,
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: -0.41,
+                            Divider(
+                              color: white,
+                              indent: 10,
+                            ),
+                            const CircleAvatar(
+                              radius: 20,
+                              backgroundColor: Colors.white24,
+                              child: Text(
+                                '3',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w500,
+                                  letterSpacing: -0.41,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(

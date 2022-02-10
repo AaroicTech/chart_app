@@ -25,28 +25,28 @@ final data1 = [
 
 final data2 = [
   {
-    'id': 1,
+    'id': 4,
     'image': 'assets/Frame 33546.png',
     'title': 'Mark Greene',
     'distance': '7km',
     'time': 'S2/hr'
   },
   {
-    'id': 2,
+    'id': 5,
     'image': 'assets/Frame 33553.png',
     'title': 'Trina Kain ',
     'distance': '4km',
     'time': 'S5/h'
   },
   {
-    'id': 3,
+    'id': 6,
     'image': 'assets/image.png',
     'title': 'Alex Murray',
     'distance': '7km',
     'time': 'S3/h'
   },
   {
-    'id': 4,
+    'id': 7,
     'image': 'assets/Frame 33553.png',
     'title': 'Rose Matt.',
     'distance': '7km',
@@ -55,28 +55,28 @@ final data2 = [
 ];
 final data3 = [
   {
-    'id': 1,
+    'id': 8,
     'image': 'assets/Frame 33546.png',
     'title': 'Mark Greene',
     'messages': 'Hello friend its been a while',
     'time':  DateTime.now()
   },
   {
-    'id': 2,
+    'id': 9,
     'image': 'assets/Frame 33553.png',
     'title': 'Trina Kain ',
    'messages': 'Hello',
     'time': DateTime.now()
   },
   {
-    'id': 3,
+    'id': 10,
     'image': 'assets/image.png',
     'title': 'Alex Murray',
     'messages': 'Hello',
     'time':  DateTime.now()
   },
   {
-    'id': 4,
+    'id': 11,
     'image': 'assets/Frame 33553.png',
     'title': 'Rose Matt.',
     'messages': 'Hello',
