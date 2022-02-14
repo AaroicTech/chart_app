@@ -5,13 +5,10 @@ import 'package:flutter/material.dart';
 Widget itemView(
     {VoidCallback? onTap, Map<String, dynamic>? modelData, Color? color}) {
   return GestureDetector(
-    
     onTap: onTap,
     child: Container(
       width: 170,
-      margin: const EdgeInsets.only(
-        right: 20,
-      ),
+      margin: const EdgeInsets.only(right: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -32,9 +29,7 @@ Widget itemView(
               ),
             ),
           ),
-          const SizedBox(
-            height: 15,
-          ),
+          const SizedBox(height: 15),
           Container(
             child: Row(
               children: [
@@ -50,9 +45,7 @@ Widget itemView(
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: color ?? black,
-                      borderRadius: BorderRadius.circular(
-                        10,
-                      ),
+                      borderRadius: BorderRadius.circular(10),
                     ),
                     child: Center(
                       child: Text(

@@ -7,10 +7,7 @@ Widget tabView({String? tex}) {
       Column(
         children: [
           Container(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 15,
-              vertical: 15,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
             child: Row(
               children: [
                 Container(
@@ -29,9 +26,7 @@ Widget tabView({String? tex}) {
                           color: black,
                         ),
                       ),
-                      const SizedBox(
-                        width: 10,
-                      ),
+                      const SizedBox(width: 10),
                       Text(
                         '30 years',
                         style: TextStyle(
@@ -43,9 +38,7 @@ Widget tabView({String? tex}) {
                     ],
                   ),
                 ),
-                const SizedBox(
-                  width: 50,
-                ),
+                const SizedBox(width: 50),
                 Container(
                   alignment: Alignment.topRight,
                   height: 35,
@@ -61,9 +54,7 @@ Widget tabView({String? tex}) {
                           color: black,
                         ),
                       ),
-                      const SizedBox(
-                        width: 10,
-                      ),
+                      const SizedBox(width: 10),
                       Text(
                         '11 months',
                         style: TextStyle(
@@ -79,9 +70,7 @@ Widget tabView({String? tex}) {
             ),
           ),
           Container(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 15,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             alignment: Alignment.bottomLeft,
             child: RichText(
               text: const TextSpan(
@@ -121,29 +110,20 @@ Widget tabView({String? tex}) {
               ),
             ),
           ),
-          // const SizedBox(
-          //   height: 5,
-          // ),
           GestureDetector(
-            onTap: () {
-              // Navigator.pushNamed(context, ChartScreen.routeName);
-            },
+            onTap: () {},
             child: Container(
               height: 45,
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: deepOrange,
-                borderRadius: BorderRadius.circular(
-                  10,
-                ),
+                borderRadius: BorderRadius.circular(10),
               ),
               margin: const EdgeInsets.symmetric(
                 horizontal: 15,
                 vertical: 15,
               ),
-              padding: const EdgeInsets.all(
-                15,
-              ),
+              padding: const EdgeInsets.all(15),
               child: Text(
                 "Check Schedule",
                 style: TextStyle(

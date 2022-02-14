@@ -26,21 +26,21 @@ class CustomSearchDelegate extends SearchDelegate {
 
   @override
   Widget buildResults(BuildContext context) {
-    if (query.length < 3) {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Center(
-            child: Center(
-              child: Text(
-                'These are the list of your current\nand previours search',
-                style: textStyle3,
-              ),
-            ),
-          )
-        ],
-      );
-    }
+    // if (query.length < 3) {
+    //   return Column(
+    //     mainAxisAlignment: MainAxisAlignment.center,
+    //     children: <Widget>[
+    //       Center(
+    //         child: Center(
+    //           child: Text(
+    //             'These are the list of your current\nand previours search',
+    //             style: textStyle3,
+    //           ),
+    //         ),
+    //       )
+    //     ],
+    //   );
+    // }
 
     return ListView(
       children: List.generate(

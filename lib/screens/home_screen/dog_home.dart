@@ -1,18 +1,19 @@
 import 'package:chart_app/Model/data_model.dart';
 import 'package:chart_app/Widgets/detail_screen_widget.dart';
-import 'package:chart_app/screens/home_screen/dog_home.dart';
+import 'package:chart_app/screens/Bottom_nav_pages/detail_screen.dart';
 import 'package:chart_app/screens/home_screen/search.dart';
 import 'package:chart_app/styles/colors.dart';
 import 'package:chart_app/styles/font.dart';
 import 'package:flutter/material.dart';
-import '../detail_screen.dart';
 
-class HomeNavPage extends StatefulWidget {
+import 'date_picker_screen.dart';
+
+class DogHome extends StatefulWidget {
   @override
-  _HomeNavPageState createState() => _HomeNavPageState();
+  _DogHomeState createState() => _DogHomeState();
 }
 
-class _HomeNavPageState extends State<HomeNavPage> {
+class _DogHomeState extends State<DogHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +40,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (_) => DogHome(),
+                              builder: (_) => DatePicker(),
                             ),
                           );
                         },
@@ -127,9 +128,28 @@ class _HomeNavPageState extends State<HomeNavPage> {
                     ],
                   ),
                 ),
-                const SizedBox(
-                  height: 20,
+                const SizedBox(height: 10),
+                Container(
+                  height: 100,
+                  width: 360,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      color: deepOrange,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Row(
+                      children: [
+                        Text('asdasdsasasaa\naaaaa'),
+                        const SizedBox(width: 180),
+                        Image(
+                          image: AssetImage('assets/woo_dog.png'),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
+                const SizedBox(height: 10),
                 Row(
                   children: [
                     const Padding(

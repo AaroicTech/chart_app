@@ -1,12 +1,12 @@
 import 'package:chart_app/styles/colors.dart';
 import 'package:flutter/material.dart';
 
-Widget tab({VoidCallback? ontap, }) {
+Widget tab({
+  VoidCallback? ontap,
+}) {
   return TabBar(
     onTap: (value) {
-      // setState(() {
-      //   //  _selectedTabs = value;
-      // });
+     
       print(value);
     },
     labelColor: Colors.black,
@@ -16,9 +16,7 @@ Widget tab({VoidCallback? ontap, }) {
         child: Container(
           decoration: BoxDecoration(
             //color: black,
-            borderRadius: BorderRadius.circular(
-              12,
-            ),
+            borderRadius: BorderRadius.circular(12),
           ),
           height: 40,
           width: 80,
@@ -34,9 +32,7 @@ Widget tab({VoidCallback? ontap, }) {
         child: Container(
           decoration: BoxDecoration(
             //color: black12,
-            borderRadius: BorderRadius.circular(
-              12,
-            ),
+            borderRadius: BorderRadius.circular(12),
           ),
           height: 40,
           width: 80,
@@ -52,9 +48,7 @@ Widget tab({VoidCallback? ontap, }) {
         child: Container(
           decoration: BoxDecoration(
             // color: black12,
-            borderRadius: BorderRadius.circular(
-              12,
-            ),
+            borderRadius: BorderRadius.circular(12),
           ),
           height: 40,
           width: 80,

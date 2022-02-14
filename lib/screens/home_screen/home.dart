@@ -16,12 +16,9 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final List<Widget> _pages = [
     HomeNavPage(),
-    Moment(),
+    MomentPage(),
     ChartScreen(),
     ProfileNavPage(
-      // title: mod'',
-      // id: '',
-      // image: ''
       id: 'id',
       title: 'title',
       image: 'image',
@@ -54,34 +51,26 @@ class _HomeState extends State<Home> {
             icon: Icon(
               Icons.home,
             ),
-            title: const Text(
-              'Home',
-            ),
+            title: const Text('Home'),
           ),
           BottomNavigationBarItem(
             backgroundColor: red,
             icon: Icon(
               Icons.group,
             ),
-            title: const Text(
-              'Moment',
-            ),
+            title: const Text('Moment'),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.send,
             ),
-            title: const Text(
-              'Chat',
-            ),
+            title: const Text('Chat'),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.person,
             ),
-            title: const Text(
-              'Profile',
-            ),
+            title: const Text('Profile'),
           ),
         ],
       ),

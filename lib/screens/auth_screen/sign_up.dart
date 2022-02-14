@@ -25,33 +25,31 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: white,
-      appBar: AppBar(
-        backgroundColor: white,
-        elevation: 0,
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.arrow_back,
-            color: black,
-          ),
-        ),
-      ),
       body: Container(
         child: ListView(
           children: [
             Column(
               children: [
+                Container(
+                  alignment: Alignment.topLeft,
+                  child: IconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Icon(
+                      Icons.arrow_back,
+                      color: black,
+                    ),
+                  ),
+                ),
+
                 Padding(
-                  padding: const EdgeInsets.only(top: 15, right: 110),
+                  padding: const EdgeInsets.only(right: 110),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                     const Text(
+                      const Text(
                         'Lets start here',
                         style: TextStyle(
                           color: Colors.black,
@@ -61,7 +59,7 @@ class _SignUpState extends State<SignUp> {
                         ),
                       ),
                       const SizedBox(
-                        height: 8,
+                        height: 5,
                       ),
                       Text(
                         'Fill in your details to begin',
@@ -83,7 +81,7 @@ class _SignUpState extends State<SignUp> {
                   key: _formKey,
                   child: Container(
                     padding: const EdgeInsets.only(
-                        top: 25.0, left: 20.0, right: 20.0),
+                        top: 20.0, left: 20.0, right: 20.0),
                     child: Column(
                       children: [
                         Column(
@@ -180,7 +178,7 @@ class _SignUpState extends State<SignUp> {
                           ],
                         ),
                         const SizedBox(
-                          height: 18.0,
+                          height: 10.0,
                         ),
                         Container(
                           height: 60,
@@ -210,8 +208,84 @@ class _SignUpState extends State<SignUp> {
                             ),
                           ),
                         ),
+                        SizedBox(height: 10),
+                        Center(
+                          child: Text(
+                            'or',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 17,
+                              fontWeight: FontWeight.w700,
+                              letterSpacing: -0.41,
+                            ),
+                          ),
+                        ),
                         const SizedBox(
-                          height: 190,
+                          height: 10.0,
+                        ),
+                        Container(
+                          height: 60,
+                          width: MediaQuery.of(context).size.width,
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            color: indigo,
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: TextButton(
+                            onPressed: () {},
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.facebook,
+                                  color: white,
+                                ),
+                                SizedBox(width: 50),
+                                const Text(
+                                  'Connect with Facebook',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w700,
+                                    letterSpacing: -0.41,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10.0,
+                        ),
+                        Container(
+                          height: 60,
+                          width: MediaQuery.of(context).size.width,
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          decoration: BoxDecoration(
+                            color: white,
+                            borderRadius: BorderRadius.circular(15),
+                            border: Border.all(),
+                          ),
+                          child: TextButton(
+                            onPressed: () {},
+                            child: Row(
+                              children: [
+                                Icon(Icons.notifications),
+                                SizedBox(width: 50),
+                                const Text(
+                                  'Connect with Google',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w700,
+                                    letterSpacing: -0.41,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 40,
                         ),
                         Column(
                           children: [

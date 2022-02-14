@@ -28,168 +28,144 @@ class _ProfileNavPage extends State<ProfileNavPage> {
     return Scaffold(
       backgroundColor: white,
       body: Container(
-        margin: const EdgeInsets.only(
-          top: 20,
-        ),
+        //margin: const EdgeInsets.only(top: 1),
         child: ListView(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(
-                top: 30,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text(
-                    'Profile',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 30,
-                      fontWeight: FontWeight.w700,
-                      letterSpacing: -0.41,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  CircleAvatar(
-                    // backgroundImage: AssetImage(widget.image!),
-                    radius: 50,
-                  )
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => EditProfile(
-                      id: 'id',
-                      title: 'title',
-                      image: 'image',
-                    ),
-                  ),
-                );
-              },
-              child: Card(
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                  height: 50,
+                  width: 400,
                   decoration: BoxDecoration(
-                    //color: black12,
+                    //color: black,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Container(
-                    height: 60,
-                    child: Text(
-                      'Name',
-                      style: textStyle2,
-                    ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.settings,
+                        color: black,
+                        size: 20,
+                      ),
+                      const SizedBox(width: 310),
+                      Icon(
+                        Icons.notifications,
+                        color: black,
+                        size: 20,
+                      ),
+                    ],
                   ),
                 ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) =>
-                        EditProfile(id: 'id', title: 'title', image: 'image'),
-                  ),
-                );
-              },
-              child: Card(
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  decoration: BoxDecoration(
-                    //color: black12,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Container(
-                    height: 60,
-                    child: Text(
-                      'Phone',
-                      style: textStyle2,
-                    ),
+                const CircleAvatar(
+                  backgroundImage: AssetImage('assets/woo_dog.png'),
+                  radius: 60,
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  'Aaron James Matthew',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: -0.41,
                   ),
                 ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => EditProfile(
-                      id: 'id',
-                      title: 'title',
-                      image: 'image',
+                const SizedBox(height: 8),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.verified_rounded,
+                      size: 15,
+                      color: grey,
                     ),
-                  ),
-                );
-              },
-              child: Card(
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  decoration: BoxDecoration(
-                    //color: black12,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Container(
-                    height: 60,
-                    child: Text(
-                      'Email',
-                      style: textStyle2,
+                    const SizedBox(width: 8),
+                    const Text(
+                      'sdasdafsdasds',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 10,
+                        fontWeight: FontWeight.w500,
+                        letterSpacing: -0.41,
+                      ),
                     ),
-                  ),
+                  ],
                 ),
-              ),
+              ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => EditProfile(
-                      id: 'id',
-                      title: 'title',
-                      image: 'image',
-                    ),
-                  ),
-                );
-              },
-              child: Text(
-                'Tell us about your self',
-                style: textStyle1,
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
             Container(
+              height: 500,
               padding: const EdgeInsets.symmetric(horizontal: 10),
               decoration: BoxDecoration(
                 //color: black12,
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Container(
-                height: 60,
-                child: Text(
-                  'My name is Aaron James Matthew am a mobil app developer,i currently work at Meghee Plc, Port Harcurt, Nigeria',
+                child: ListView(
+                  children: [
+                    Card(
+                      child: ListTile(
+                        leading: Icon(Icons.gpp_good),
+                        title: Text('My pets'),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Card(
+                      child: ListTile(
+                        leading: Icon(
+                          Icons.favorite,
+                          color: red,
+                        ),
+                        title: Text('My favourites'),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Card(
+                      child: ListTile(
+                        leading: Icon(Icons.border_all),
+                        title: Text('My bodyes'),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Card(
+                      child: ListTile(
+                        leading: Icon(Icons.wallet_giftcard),
+                        title: Text('My wallet'),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Container(
+                      height: 50,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: black,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'View all',
+                            style: TextStyle(
+                              color: white,
+                            ),
+                          ),
+                          SizedBox(width: 10),
+                          Icon(
+                            Icons.arrow_forward,
+                            color: white,
+                            size: 20,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),

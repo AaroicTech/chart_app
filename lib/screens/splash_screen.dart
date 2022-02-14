@@ -64,7 +64,6 @@ class OnboardingScreen extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 490, left: 105),
                       child: Center(
                         child: Row(
-                          
                           children: [
                             const CircleAvatar(
                               radius: 20,
@@ -118,9 +117,7 @@ class OnboardingScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      height: 12,
-                    ),
+                    const SizedBox(height: 12),
                     Container(
                       margin: const EdgeInsets.only(top: 1),
                       child: const Center(
@@ -135,9 +132,7 @@ class OnboardingScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      height: 6,
-                    ),
+                    const SizedBox(height: 6),
                     const Text(
                       "Let's help you!",
                       style: TextStyle(
@@ -151,9 +146,7 @@ class OnboardingScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 4,
-            ),
+            const SizedBox(height: 4),
             Container(
               margin: const EdgeInsets.all(8),
               child: Center(

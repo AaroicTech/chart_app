@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
-
 import 'colors.dart';
 
 final textStyle1 = TextStyle(
   fontWeight: FontWeight.bold,
   color: black,
+  // fontSize: 15,
+);
+
+final textStyle11 = TextStyle(
+  fontWeight: FontWeight.bold,
+  color: white,
   // fontSize: 15,
 );
 
