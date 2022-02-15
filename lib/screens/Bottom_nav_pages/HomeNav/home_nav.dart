@@ -107,12 +107,12 @@ class _HomeNavPageState extends State<HomeNavPage> {
                             readOnly: true,
                             decoration: InputDecoration(
                               border: InputBorder.none,
-                              hintText: 'Cyv Ubaclre',
+                              hintText: 'Kiyv, Ukraine',
                               hintStyle: textStyle2,
                               prefixIcon: IconButton(
                                 onPressed: () {},
                                 icon: Icon(
-                                  Icons.search,
+                                  Icons.edit_location_outlined,
                                   color: black26,
                                 ),
                               ),
@@ -143,7 +143,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                       width: 218,
                     ),
                     Text(
-                      'View off',
+                      'View all',
                       style: TextStyle(
                         decoration: TextDecoration.underline,
                         fontWeight: FontWeight.w500,
@@ -208,7 +208,7 @@ class _HomeNavPageState extends State<HomeNavPage> {
                           width: 200,
                         ),
                         Text(
-                          'View off',
+                          'View all',
                           style: TextStyle(
                             decoration: TextDecoration.underline,
                             fontWeight: FontWeight.w500,

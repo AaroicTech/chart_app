@@ -3,6 +3,8 @@ import 'package:chart_app/styles/colors.dart';
 import 'package:chart_app/styles/font.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/widgets.dart';
 
 import 'pet.dart';
 
@@ -27,7 +29,7 @@ class _Payment_screen extends State<Payment_screen> {
                   'Payment',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 24,
+                    fontSize: 30,
                     fontWeight: FontWeight.w700,
                     letterSpacing: -0.41,
                   ),
@@ -38,12 +40,11 @@ class _Payment_screen extends State<Payment_screen> {
             Padding(
               padding: const EdgeInsets.only(left: 20),
               child: Container(
-                child: const Text(
+                child: Text(
                   'Just before your dog walk starts',
                   style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w700,
+                    color: Colors.grey,
+                    fontSize: 20,
                     letterSpacing: -0.41,
                   ),
                 ),
@@ -57,19 +58,83 @@ class _Payment_screen extends State<Payment_screen> {
                     height: 180,
                     width: 300,
                     decoration: BoxDecoration(
-                        color: purple, borderRadius: BorderRadius.circular(20)),
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                        colors: [deepPurple, pink],
+                      ),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Container(
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Text(
+                                  'Cristion Downey',
+                                  style: TextStyle(
+                                    color: white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const SizedBox(width: 120),
+                                Icon(Icons.add),
+                              ],
+                            ),
+                            const SizedBox(width: 20),
+                            Container(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                'S3,265,23',
+                                style: TextStyle(
+                                  color: white,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 60),
+                            Row(
+                              children: [
+                                Text(
+                                  '5282 3456 7890 1289',
+                                  style: TextStyle(color: white, fontSize: 15),
+                                ),
+                                const SizedBox(width: 70),
+                                Text(
+                                  '09/25',
+                                  style: TextStyle(color: white),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
                   const SizedBox(width: 8),
                   Container(
                     height: 180,
                     width: 50,
                     decoration: BoxDecoration(
-                        color: purple, borderRadius: BorderRadius.circular(18)),
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                        colors: [pink, white],
+                      ),
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                    child: Icon(
+                      Icons.add,
+                      color: pink,
+                      size: 24,
+                    ),
                   ),
                 ],
               ),
             ),
-            const SizedBox(height: 5),
             Container(
               height: 500,
               padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -94,7 +159,7 @@ class _Payment_screen extends State<Payment_screen> {
                     ),
                     Card(
                       child: ListTile(
-                        leading: Icon(Icons.approval),
+                        leading: Icon(Icons.pets),
                         title: Text('Groceries'),
                         trailing: Text(
                           '-S12',

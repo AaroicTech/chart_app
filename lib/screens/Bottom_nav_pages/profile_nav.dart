@@ -20,8 +20,6 @@ class ProfileNavPage extends StatefulWidget {
 }
 
 class _ProfileNavPage extends State<ProfileNavPage> {
-  GlobalKey<FormState> _formKey = GlobalKey();
-
   bool obscure = false;
   @override
   Widget build(BuildContext context) {
@@ -66,30 +64,42 @@ class _ProfileNavPage extends State<ProfileNavPage> {
                   radius: 60,
                 ),
                 const SizedBox(height: 10),
-                const Text(
-                  'Aaron James Matthew',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: -0.41,
+                Padding(
+                  padding: const EdgeInsets.only(left: 120),
+                  child: Row(
+                    children: [
+                      const Text(
+                        'Cristian Downey',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: -0.41,
+                        ),
+                      ),
+                      Icon(
+                        Icons.edit,
+                        size: 20,
+                        color: grey,
+                      )
+                    ],
                   ),
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 4),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(
-                      Icons.verified_rounded,
+                      Icons.edit_location,
                       size: 15,
                       color: grey,
                     ),
-                    const SizedBox(width: 8),
+                    const SizedBox(width: 4),
                     const Text(
-                      'sdasdafsdasds',
+                      'Moscow, Russia',
                       style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 10,
+                        color: Colors.grey,
+                        fontSize: 15,
                         fontWeight: FontWeight.w500,
                         letterSpacing: -0.41,
                       ),

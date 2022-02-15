@@ -6,7 +6,7 @@ import 'package:chart_app/styles/colors.dart';
 import 'package:chart_app/styles/font.dart';
 import 'package:flutter/material.dart';
 
-import 'date_picker_screen.dart';
+import 'walk_plane.dart';
 
 class DogHome extends StatefulWidget {
   @override
@@ -108,12 +108,12 @@ class _DogHomeState extends State<DogHome> {
                             readOnly: true,
                             decoration: InputDecoration(
                               border: InputBorder.none,
-                              hintText: 'Cyv Ubaclre',
+                              hintText: 'Your Location',
                               hintStyle: textStyle2,
                               prefixIcon: IconButton(
                                 onPressed: () {},
                                 icon: Icon(
-                                  Icons.search,
+                                  Icons.edit_location,
                                   color: black26,
                                 ),
                               ),
@@ -140,10 +140,41 @@ class _DogHomeState extends State<DogHome> {
                     ),
                     child: Row(
                       children: [
-                        Text('asdasdsasasaa\naaaaa'),
-                        const SizedBox(width: 180),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 30),
+                          child: Container(
+                            //alignment: Alignment.centerLeft,
+                            child: Column(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.only(right: 75),
+                                  child: Text(
+                                    'Suprise For You',
+                                    style: TextStyle(
+                                      color: white,
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 15,
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(height: 3),
+                                Text(
+                                  'The first walk is free!',
+                                  style: TextStyle(
+                                    color: white,
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 90),
                         Image(
-                          image: AssetImage('assets/woo_dog.png'),
+                          image: AssetImage(
+                            'assets/woo_dog.png',
+                          ),
                         ),
                       ],
                     ),
@@ -156,14 +187,14 @@ class _DogHomeState extends State<DogHome> {
                       padding: EdgeInsets.all(10),
                     ),
                     Text(
-                      'Near you',
+                      'Top walkers',
                       style: textStyle3,
                     ),
                     const SizedBox(
-                      width: 218,
+                      width: 195,
                     ),
                     Text(
-                      'View off',
+                      'View all',
                       style: TextStyle(
                         decoration: TextDecoration.underline,
                         fontWeight: FontWeight.w500,
@@ -228,7 +259,7 @@ class _DogHomeState extends State<DogHome> {
                           width: 200,
                         ),
                         Text(
-                          'View off',
+                          'View all',
                           style: TextStyle(
                             decoration: TextDecoration.underline,
                             fontWeight: FontWeight.w500,

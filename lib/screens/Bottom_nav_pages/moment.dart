@@ -24,7 +24,7 @@ class _MomentPageState extends State<MomentPage> {
                 child: Column(children: [
                   Row(
                     children: [
-                      Padding(padding: EdgeInsets.all(5)),
+                      const Padding(padding: EdgeInsets.all(5)),
                       Container(
                         child: const Image(
                           image: AssetImage(
@@ -37,7 +37,7 @@ class _MomentPageState extends State<MomentPage> {
                           image: AssetImage('assets/woo_dog.png'),
                         ),
                       ),
-                      SizedBox(width: 130),
+                      const SizedBox(width: 130),
                       Container(
                         padding: const EdgeInsets.only(left: 8),
                         child: Row(
@@ -80,7 +80,7 @@ class _MomentPageState extends State<MomentPage> {
                       scrollDirection: Axis.horizontal,
                       children: List.generate(
                         10,
-                        (index) => CircleAvatar(
+                        (index) => const CircleAvatar(
                           radius: 30,
                           backgroundImage: AssetImage(
                             'assets/7d8a156d-f84d-40a9-97ea-c08c2be277cf_200x200 1.png',
@@ -93,7 +93,7 @@ class _MomentPageState extends State<MomentPage> {
                     padding: EdgeInsets.all(10),
                   ),
                   Container(
-                    padding: EdgeInsets.only(right: 200),
+                    padding: const EdgeInsets.only(right: 200),
                     child: Text(
                       'Recently added',
                       style: textStyle3,
@@ -137,7 +137,7 @@ class _MomentPageState extends State<MomentPage> {
                                                 ),
                                               ),
                                               Positioned(
-                                                top: 10,
+                                                top: 8,
                                                 right: 10,
                                                 left: 0,
                                                 child: Center(
@@ -145,23 +145,31 @@ class _MomentPageState extends State<MomentPage> {
                                                     height: 20,
                                                     width: 145,
                                                     decoration: BoxDecoration(
-                                                      color: white,
+                                                      color: transparent,
                                                       borderRadius:
                                                           BorderRadius.circular(
                                                               15),
                                                     ),
-                                                    child: const Text('asda'),
+                                                    child: Container(
+                                                      alignment:
+                                                          Alignment.topLeft,
+                                                      child: const Icon(
+                                                        Icons.more_horiz,
+                                                        color: Colors.white,
+                                                        size: 25,
+                                                      ),
+                                                    ),
                                                   ),
                                                 ),
                                               ),
                                               Positioned(
                                                 top: 240,
-                                                right: 50,
+                                                // right: 60,
                                                 left: 0,
                                                 child: Center(
                                                   child: Container(
                                                     height: 20,
-                                                    width: 100,
+                                                    width: 60,
                                                     decoration: BoxDecoration(
                                                       color: grey,
                                                       borderRadius:
@@ -173,11 +181,69 @@ class _MomentPageState extends State<MomentPage> {
                                                           MainAxisAlignment
                                                               .center,
                                                       children: [
-                                                        Text('asda'),
-                                                        SizedBox(
-                                                          width: 10,
+                                                        const Icon(
+                                                          Icons.favorite,
+                                                          color: Colors.white,
+                                                          size: 10,
                                                         ),
-                                                        Text('asda'),
+                                                        Text('3.4k'),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Positioned(
+                                                top: 8,
+                                                right: 10,
+                                                left: 0,
+                                                child: Center(
+                                                  child: Container(
+                                                    height: 20,
+                                                    width: 145,
+                                                    decoration: BoxDecoration(
+                                                      color: transparent,
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              15),
+                                                    ),
+                                                    child: Container(
+                                                      alignment:
+                                                          Alignment.topLeft,
+                                                      child: const Icon(
+                                                        Icons.more_horiz,
+                                                        color: Colors.white,
+                                                        size: 25,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              SizedBox(width: 20),
+                                              Positioned(
+                                                top: 240,
+                                                right: 0,
+                                                left: 10,
+                                                child: Center(
+                                                  child: Container(
+                                                    height: 20,
+                                                    width: 40,
+                                                    decoration: BoxDecoration(
+                                                      color: grey,
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              15),
+                                                    ),
+                                                    child: Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        const Icon(
+                                                          Icons.circle,
+                                                          color: Colors.white,
+                                                          size: 10,
+                                                        ),
+                                                        Text('70'),
                                                       ],
                                                     ),
                                                   ),
